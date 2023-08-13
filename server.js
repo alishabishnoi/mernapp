@@ -13,7 +13,7 @@ const userRoute=require("./routes/userRoute");
 
 
 mongoose
-  .connect(process.env.URI)
+  .connect(process.env.MONGODB)
   .then(() => {
     console.log("Connected Successfully");
     app.listen(process.env.PORT || 5000, (err) => {
