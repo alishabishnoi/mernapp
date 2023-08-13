@@ -6,7 +6,7 @@ const Read = () => {
   const [error, setError] = useState();
 
   async function handleDelete(id) {
-    const response = await fetch(`http://localhost:5000/${id}`, {
+    const response = await fetch(`https://mernapp-p4mv.onrender.com/${id}`, {
       method: "DELETE",
     });
 
@@ -25,7 +25,7 @@ const Read = () => {
   }
 
   async function getData() {
-    const response = await fetch("http://localhost:5000");
+    const response = await fetch("https://mernapp-p4mv.onrender.com");
     const result = await response.json();
     console.log("result..", result);
     if (!response.ok) {
